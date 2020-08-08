@@ -80,6 +80,10 @@ body {
 
 /* header */
 
+.header-site {
+  border-bottom: 1px solid #ececec;
+}
+
 .site-header {
   display: flex;
   align-items: center;
@@ -153,6 +157,26 @@ body {
   color: var(--accent-color);
 }
 
+.menu-nav {
+  min-height: 78px;
+  padding-top: 32px;
+}
+
+.menu-nav .item {
+  position: relative;
+}
+
+.current::after {
+  position: absolute;
+  bottom: -1px;
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+}
+
 .contact .link {
   display: inline-flex;
   align-items: center;
@@ -165,7 +189,7 @@ body {
 
 /* Hero */
 .hero {
-  background-color: rgba(47, 48, 58, 0.8);
+  background-color: rgba(47, 48, 58, 0.4);
   letter-spacing: 0.06em;
   text-align: center;
 
@@ -177,8 +201,8 @@ body {
 
   background-image: linear-gradient(
       to right,
-      rgba(47, 48, 58, 0.8),
-      rgba(47, 48, 58, 0.8)
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
     ),
     url(../images/studio/hero_bg.jpg);
   background-position: center;
@@ -241,6 +265,7 @@ body {
 }
 
 .profile .item {
+  position: relative;
   width: calc((100% - 60px) / 3);
   margin-right: 30px;
 }
@@ -250,7 +275,15 @@ body {
 }
 
 .profile .title-list {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 70px;
   margin: 0;
+  color: var(--white-text-color);
+  background-color: rgba(47, 48, 58, 0.8);
+  padding: 27px 82px;
 }
 
 .profile img {
